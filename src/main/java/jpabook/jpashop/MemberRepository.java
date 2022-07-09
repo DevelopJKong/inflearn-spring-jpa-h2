@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class MemberRepository {
     
-    @PersistenceContext
+    @PersistenceContext// 정확히 무슨 뜻인지 모르겠다
     private EntityManager em;
 
     public Long save(Member member) {
@@ -19,5 +19,4 @@ public class MemberRepository {
     public Member find(Long id) {
         return em.find(Member.class, id);
     }
-    
 }
